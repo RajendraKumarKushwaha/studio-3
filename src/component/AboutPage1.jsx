@@ -9,8 +9,8 @@ export default function AboutSection() {
                 {/* Heading Animation */}
                 <FadeIn delay={0.2}>
                     <div>
-                        <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                        <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
+                        <p suppressHydrationWarning className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
+                        <h2 suppressHydrationWarning className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
                             Crafting Timeless Memories Through Our Lens
                         </h2>
                     </div>
