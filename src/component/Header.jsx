@@ -17,7 +17,7 @@ export default function HeaderPage1() {
 
     return (
         <header className={`w-full fixed top-0 left-0 z-1000 transition-all duration-300 
-            ${isHome ? "bg-transparent text-white heading" : "bg-white heading text-black shadow-md "}`}>
+            ${isHome ? "bg-transparent text-white para" : "bg-white para text-black shadow-md "}`}>
 
             <div className={`container mx-auto flex items-center justify-between px-4 py-4 
                 ${isHome ? "text-white" : "text-black"}`}>

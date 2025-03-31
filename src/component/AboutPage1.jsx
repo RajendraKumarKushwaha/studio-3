@@ -5,17 +5,17 @@ export default function AboutSection() {
     return (
         <div className="text-white bg-[#C0984B] py-24">
 
-            <section className="flex flex-col items-center text-center">
+            <section className="flex container px-4 flex-col items-center text-center">
                 {/* Heading Animation */}
                 <FadeIn delay={0.2}>
                     <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                    <h2 className="text-center text-white text-4xl font-bold mb-10 heading">
+                    <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
                         Crafting Timeless Memories Through Our Lens
                     </h2>
                 </FadeIn>
 
                 {/* Parent Flex Container (Half-Half Layout) */}
-                <div className="container flex flex-col md:flex-row items-center sm:items-start px-4 z-10 gap-12">
+                <div className=" flex flex-col md:flex-row items-center sm:items-start  z-10 gap-12">
 
                     {/* Image Section */}
                     <div className="w-full md:w-1/2">
@@ -35,7 +35,7 @@ export default function AboutSection() {
                         <FadeIn delay={0.6}>
                             <h3 className="text-4xl mb-6 drop-shadow-lg">
                                 <div className="text-white py-4">
-                                    <span className="text-white heading text-4xl md:text-5xl">
+                                    <span className="text-white heading text-2xl md:text-4xl">
                                         The reasons why you should choose our Studio
                                     </span>
                                 </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -30,9 +30,9 @@ body {
 
   .para {
     /* font-family: 'Courgette', cursive; */
-    font-family: 'Cinzel', serif;
-  }
+    font-family: 'Lora', serif;
   .stroke-text {
     -webkit-text-stroke: 2px white; /* Outline Effect */
   }
+}
 }

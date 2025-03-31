@@ -27,7 +27,7 @@ export default function AboutDetails() {
         <section className="w-full bg-[#C0984B] text-white py-24">
             <FadeIn delay={0.2}>
                 <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                <h2 className="text-center text-white text-4xl font-bold mb-10 heading">
+                <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
                     Crafting Timeless Memories Through Our Lens
                 </h2>
             </FadeIn>
@@ -49,7 +49,7 @@ export default function AboutDetails() {
                 {/* About Content */}
                 <div className="w-full md:w-1/2 flex-1 space-y-6">
                     <FadeIn delay={0}>
-                        <h2 className="text-4xl md:text-5xl heading font-bold leading-tight">
+                        <h2 className="text-2xl md:text-4xl heading font-bold leading-tight">
                             Capturing Your Most <span className="text-white">Cherished Moments</span>
                         </h2>
                     </FadeIn>

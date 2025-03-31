@@ -13,8 +13,8 @@ export default function ServicesPage1() {
   return (
     <div className="text-[#f28b00] py-24">
       <FadeIn delay={0.2}>
-        <p className="text-center text-black text-3xl font-bold mb-10 heading">Our Services</p>
-        <h2 className="text-center text-[#C0984B] text-4xl font-bold mb-10 heading">
+        <p className="px-4 text-center text-black text-3xl font-bold mb-10 heading">Our Services</p>
+        <h2 className="px-4 text-center text-[#C0984B] text-2xl md:text-4xl  font-bold mb-10 heading">
         Professional Photography for Every Special Occasion
         </h2>
       </FadeIn>

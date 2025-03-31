@@ -1,64 +1,36 @@
-"use client";
-import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { FadeIn } from "@/ClientComponent/FadeIn";
+import ContactForm from "@/ClientComponent/ContactForm";
 
-export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted", formData);
-  };
-
+export default async function ContactUs() {
   return (
     <section className="bg-[#C0984B] py-24">
       <div className="container px-4 mx-auto text-center mb-10">
-        <h2 className="text-4xl heading font-bold">Have an Event?</h2>
-        <p className="text-lg text-white para mt-2">
-          We'd love to hear from you! Reach out to us for any inquiries.
-        </p>
+        <FadeIn delay={0.2}>
+          <p className="text-center text-black text-3xl font-bold mb-10 heading">Have an Event?</p>
+          <h2 className="text-center text-2xl md:text-4xl font-bold mb-10 text-white heading">
+            We'd love to hear from you! Reach out to us for any inquiries.
+          </h2>
+        </FadeIn>
       </div>
 
       <div className="container px-4 mx-auto grid md:grid-cols-3 gap-8 text-center mb-12">
         <div className="flex flex-col items-center">
           <MapPin className="text-black w-10 heading h-10 mb-3" />
-          <p className="text-lg text-white para font-semibold">123, Studio Street, City, Country</p>
+          <p className="text-lg text-white para ">123, Studio Street, City, Country</p>
         </div>
         <div className="flex flex-col items-center">
           <Phone className="text-black w-10 h-10 mb-3" />
-          <p className="text-lg text-white para font-semibold">+123 456 7890</p>
+          <p className="text-lg text-white para ">+123 456 7890</p>
         </div>
         <div className="flex flex-col items-center">
           <Mail className="text-black w-10 h-10 mb-3" />
-          <p className="text-lg text-white para font-semibold">contact@studio.com</p>
+          <p className="text-lg text-white para">contact@studio.com</p>
         </div>
       </div>
 
       <div className="container px-4 mx-auto grid md:grid-cols-2 gap-10 items-start">
-        {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="bg-white shadow-lg p-6 ">
-          <h3 className="text-2xl font-bold mb-6 text-[#C0984B] heading text-center">Get In Touch</h3>
-          <div className="space-y-4">
-            <input type="text" name="name" placeholder="Your Name" className="w-full para text-black p-3 border rounded" onChange={handleChange} required />
-            <input type="email" name="email" placeholder="Your Email" className="w-full para p-3 border rounded" onChange={handleChange} required />
-            <input type="text" name="phone" placeholder="Your Phone" className="w-full para p-3 border rounded" onChange={handleChange} required />
-            <input type="text" name="subject" placeholder="Subject" className="w-full para p-3 border rounded" onChange={handleChange} required />
-            <textarea name="message" rows="4" placeholder="Your Message" className="w-full para p-3 border rounded" onChange={handleChange} required></textarea>
-          </div>
-          <button type="submit" className="mt-6 w-full bg-[#C0984B] text-white py-3  hover:bg-[#a07938] transition">Send Message</button>
-        </form>
-
-        {/* Google Map */}
+        <ContactForm />
         <div className="w-full h-[450px]">
           <iframe
             className="w-full h-full "
