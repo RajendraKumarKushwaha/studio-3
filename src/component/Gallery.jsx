@@ -1,17 +1,91 @@
-// FlowGallerySSR (Server Component)
+import GalleryClient from "@/ClientComponent/GalleryClient";
 
-import FlowGalleryClient from "@/ClientComponent/PortfolioClient";
-
-
-const images = [
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/12.jpg", title: "Wedding Moments" },
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/7.jpg", title: "Pre-Wedding Moments" },
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/2.jpg", title: "Haldi Moments" },
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/8.jpg", title: "Fashion Photography" },
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/kids/1.jpg", title: "Kids Photography" },
-  { src: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/maternity/13.jpg", title: "Maternity Photography" },
+const galleryData = [
+    {
+        title: "Wedding Photography", images: [
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/10.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/12.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/17.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/20.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/5.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/55.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/49.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/43.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/46.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/40.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/42.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/44.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/54.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/58.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/59.jpg"
+        ]
+    },
+    {
+        title: "Pre-Wedding Photography", images: [
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/7.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/8.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/9.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/51.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/52.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/48.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/49.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/50.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/4.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/19.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/20.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/16.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/17.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/18.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/11.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/13.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/12.jpg"
+        ]
+    },
+    {
+        title: "Haldi Photography", images: [
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/2.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/3.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/4.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/5.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/6.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/7.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/8.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/9.jpg',
+            'https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/haldi/10.jpg'
+        ]
+    },
+    {
+        title: "Fashion Photography", images: [
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/1.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/2.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/5.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/8.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/3.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/4.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/6.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/fashion/7.jpg"
+        ]
+    },
+    {
+        title: "Maternity Photography", images: [
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/maternity/13.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/maternity/15.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/maternity/16.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/maternity/17.jpg"
+        ]
+    },
+    {
+        title: "Kids Photography", images: [
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/kids/1.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/kids/4.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/kids/2.jpg",
+            "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/kids/5.jpg"
+        ]
+    }
 ];
 
-export default function FlowGallerySSR() {
-  return <FlowGalleryClient images={images} />;
+
+
+export default function MasonryGallery() {
+  return <GalleryClient galleryData={galleryData} />;
 }
