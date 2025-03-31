@@ -9,7 +9,7 @@ export default function CenteredBanner({ text }) {
     >
       <div className="absolute inset-0 bg-black/50" />
       <motion.h1
-  className="relative text-4xl md:text-7xl text-center heading text-transparent font-bold tracking-[1rem] stroke-text"
+  className="relative text-3xl md:text-4xl text-center heading text-transparent font-bold tracking-[1rem] stroke-text"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}

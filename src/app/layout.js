@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           crossOrigin="true"
         />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel&display=swap" 
+          href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap" 
           rel="stylesheet"
         />
       </Head>
