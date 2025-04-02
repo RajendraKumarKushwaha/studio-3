@@ -5,12 +5,12 @@ export default function AboutSection() {
     return (
         <div className="text-white bg-[#C0984B] py-24">
 
-            <section className="flex container px-4 flex-col items-center text-center">
+            <section className="flex container mx-auto px-4 flex-col items-center text-center">
                 {/* Heading Animation */}
                 <FadeIn delay={0.2}>
                     <div>
-                        <p suppressHydrationWarning className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                        <h2 suppressHydrationWarning className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
+                        <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
+                        <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
                             Crafting Timeless Memories Through Our Lens
                         </h2>
                     </div>
