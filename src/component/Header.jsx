@@ -23,28 +23,28 @@ export default function HeaderPage1() {
                 ${isHome ? "text-white" : "text-black"}`}>
 
                 {/* Logo */}
-                <h1 className={`text-2xl font-bold 
-                    ${isHome ? "text-white" : "text-black"}`}>
-                    📸 StudioName
-                </h1>
+               
+                    <img src="/images/log.png" className="w-[100px] h-[50px] object-contain" />
+
+               
 
                 {/* Desktop Nav */}
                 <div className="hidden lg:flex flex-1 justify-center gap-6 relative">
                     <Link href="/">Home</Link>
                     <Link href="/about-us">About Us</Link>
-                    <Link href="/portfolio">Portfolio</Link>
+                    {/* <Link href="/portfolio">Portfolio</Link> */}
                     <Link href="/services">Services</Link>
                     <Link href="/gallery">Gallery</Link>
 
                     <Link href="/contact-us">Contact</Link>
-                    <a
+                    {/* <a
                         href="https://g.page/r/CQ_S4e81XFoMEAI/review"
                         target="_blank"
                         rel="noopener noreferrer"
                         className=" transition"
                     >
                         Rate Us
-                    </a>
+                    </a> */}
                 </div>
 
                 {/* Desktop CTA Button */}
@@ -67,7 +67,7 @@ export default function HeaderPage1() {
             {/* Slide-In Mobile Menu */}
             <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-md transform transition-transform duration-300 z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="flex items-center justify-between px-4 py-4 border-b">
-                    <img src="https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/hero/logo.png" className="w-24" alt="logo" />
+                    <img src="/images/log.png" className="w-[50px] h-[50px] object-contain" alt="logo" />
                     <button onClick={() => setIsOpen(false)} aria-label="Close Menu" className="text-[#C0984B]">
                         <X size={24} />
                     </button>
@@ -79,9 +79,9 @@ export default function HeaderPage1() {
                     <Link href="/about-us" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
                         <Info size={20} className="text-[#C0984B]"/> About Us
                     </Link>
-                    <Link href="/portfolio" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
+                    {/* <Link href="/portfolio" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
                         <Camera size={20} className="text-[#C0984B]"/> Portfolio
-                    </Link>
+                    </Link> */}
                     <Link href="/services" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
                         <Briefcase size={20} className="text-[#C0984B]"/> Services
                     </Link>

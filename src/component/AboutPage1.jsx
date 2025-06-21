@@ -10,7 +10,7 @@ export default function AboutSection() {
                 <FadeIn delay={0.2}>
                     <div>
                         <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                        <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
+                        <h2 className="text-center text-white tracking-wider text-2xl md:text-3xl mb-10 heading">
                             Crafting Timeless Memories Through Our Lens
                         </h2>
                     </div>
@@ -23,11 +23,11 @@ export default function AboutSection() {
                     <div className="w-full md:w-1/2">
                         <FadeIn delay={0.4}>
                             <Image
-                                src="/images/11.jpg"
+                                src="https://cdn.pixabay.com/photo/2020/03/11/17/32/engineer-4922781_640.jpg"
                                 alt="Photography Studio"
                                 width={500}
                                 height={500}
-                                className="h-[350px] md:h-[500px] object-cover object-top"
+                                className="h-[350px] md:h-[500px] object-cover object-center"
                             />
                         </FadeIn>
                     </div>
@@ -37,7 +37,7 @@ export default function AboutSection() {
                         <FadeIn delay={0.6}>
                             <h3 className="text-4xl mb-6 drop-shadow-lg">
                                 <div className="text-white py-4">
-                                    <span className="text-white heading text-2xl md:text-4xl">
+                                    <span className="text-white heading text-2xl md:text-3xl tracking-wider">
                                         The reasons why you should choose our Studio
                                     </span>
                                 </div>

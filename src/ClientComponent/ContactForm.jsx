@@ -6,7 +6,6 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
 
@@ -26,7 +25,6 @@ export default function ContactForm() {
         <input type="text" name="name" placeholder="Your Name" className="w-full para text-black p-3 border rounded" onChange={handleChange} required />
         <input type="email" name="email" placeholder="Your Email" className="w-full para p-3 border rounded" onChange={handleChange} required />
         <input type="text" name="phone" placeholder="Your Phone" className="w-full para p-3 border rounded" onChange={handleChange} required />
-        <input type="text" name="subject" placeholder="Subject" className="w-full para p-3 border rounded" onChange={handleChange} required />
         <textarea name="message" rows="4" placeholder="Your Message" className="w-full para p-3 border rounded" onChange={handleChange} required></textarea>
       </div>
       <button type="submit" className="mt-6 w-full bg-[#C0984B] text-white py-3 hover:bg-[#a07938] transition">Send Message</button>

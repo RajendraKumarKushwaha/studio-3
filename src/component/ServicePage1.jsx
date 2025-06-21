@@ -1,10 +1,10 @@
 import { FadeIn } from "@/ClientComponent/FadeIn";
 
 const services = [
-    { bgImage: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/wedding/58.jpg", title: "Wedding Photography" },
-    { bgImage: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/7.jpg", title: "Pre-Wedding Shoots" },
-    { bgImage: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/9.jpg", title: "Candid Shoots" },
-    { bgImage: "https://memoriesimagesvideos.s3.us-east-1.amazonaws.com/images/prewedding/8.jpg", title: "Cinematic Shoot" },
+    { bgImage: "https://cdn.pixabay.com/photo/2024/07/10/12/25/indian-8885752_1280.jpg", title: "Wedding Photography" },
+    { bgImage: "https://cdn.pixabay.com/photo/2023/01/25/12/31/couple-7743478_1280.jpg", title: "Pre-Wedding Shoots" },
+    { bgImage: "https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg", title: "Candid Shoots" },
+    { bgImage: "https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_1280.jpg", title: "Cinematic Shoot" },
     { bgImage: "/images/event.jpg", title: "Event Shoot" },
     { bgImage: "/images/drone.jpg", title: "Drone/LED Screen" }
   ];
@@ -14,7 +14,7 @@ export default function ServicesPage1() {
     <div className="text-[#f28b00] py-24">
       <FadeIn delay={0.2}>
         <p className="px-4 text-center text-black text-3xl font-bold mb-10 heading">Our Services</p>
-        <h2 className="px-4 text-center text-[#C0984B] text-2xl md:text-4xl  font-bold mb-10 heading">
+        <h2 className="px-4 text-center text-[#C0984B] text-2xl md:text-3xl tracking-wider  mb-10 heading">
         Professional Photography for Every Special Occasion
         </h2>
       </FadeIn>

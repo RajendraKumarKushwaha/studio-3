@@ -16,7 +16,7 @@ export default function GalleryClient({ galleryData }) {
       <div className="container mx-auto px-4 py-24">
         <FadeIn delay={0.2}>
           <p className="text-center text-black text-3xl font-bold mb-10 heading">Gallery</p>
-          <h2 className="text-center text-2xl md:text-4xl font-bold mb-10 text-[#C0984B] heading">
+          <h2 className="text-center text-2xl md:text-3xl tracking-wider mb-10 text-[#C0984B] heading">
             Cherished Moments
           </h2>
         </FadeIn>
@@ -50,7 +50,7 @@ export default function GalleryClient({ galleryData }) {
         </Masonry>
         {lightbox.isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-            <button className="absolute top-4 right-6 text-white text-3xl" onClick={() => setLightbox({ isOpen: false, index: 0 })}>
+            <button className="absolute top-26 right-6 text-white text-3xl" onClick={() => setLightbox({ isOpen: false, index: 0 })}>
               <X size={32} />
             </button>
             <button

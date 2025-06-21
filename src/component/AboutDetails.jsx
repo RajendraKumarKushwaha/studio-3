@@ -5,19 +5,19 @@ const teamMembers = [
     {
         name: "Alex Smith",
         role: "Founder & Lead Photographer",
-        img: "https://www.mrfstudio.com/style/images/art/santhosh.jpg",
+        img: "https://cdn.pixabay.com/photo/2020/03/11/17/32/engineer-4922781_640.jpg",
         description: "With over 10 years of experience, Alex brings creativity and passion to every photoshoot."
     },
     {
         name: "Sophia Lee",
         role: "Creative Director",
-        img: "https://www.mrfstudio.com/style/images/art/yogesh.jpg",
+        img: "https://cdn.pixabay.com/photo/2023/07/04/19/13/stuart-bailey-8106891_640.jpg",
         description: "Sophia ensures every project reflects artistic excellence and storytelling."
     },
     {
         name: "Daniel Brown",
         role: "Senior Photographer",
-        img: "https://www.mrfstudio.com/style/images/art/madhu.jpg",
+        img: "https://cdn.pixabay.com/photo/2018/01/10/17/44/people-3074391_640.jpg",
         description: "Specializing in wedding and event photography, Daniel captures emotions beautifully."
     }
 ];
@@ -27,7 +27,7 @@ export default function AboutDetails() {
         <section className="w-full bg-[#C0984B] text-white py-24">
             <FadeIn delay={0.2}>
                 <p className="text-center text-black text-3xl font-bold mb-10 heading">About Us</p>
-                <h2 className="text-center text-white text-2xl md:text-4xl font-bold mb-10 heading">
+                <h2 className="text-center text-white text-2xl md:text-3xl tracking-wider  mb-10 heading">
                     Crafting Timeless Memories Through Our Lens
                 </h2>
             </FadeIn>
@@ -37,7 +37,7 @@ export default function AboutDetails() {
                 <div className="w-full md:w-1/2 flex-1">
                     <FadeIn delay={0.4}>
                         <Image
-                            src="/images/11.jpg"
+                            src="https://cdn.pixabay.com/photo/2020/03/11/17/32/engineer-4922781_640.jpg"
                             alt="Photography Studio"
                             width={500}
                             height={500}
@@ -49,7 +49,7 @@ export default function AboutDetails() {
                 {/* About Content */}
                 <div className="w-full md:w-1/2 flex-1 space-y-6">
                     <FadeIn delay={0}>
-                        <h2 className="text-2xl md:text-4xl heading font-bold leading-tight">
+                        <h2 className="text-2xl md:text-3xl heading tracking-wider">
                             Capturing Your Most <span className="text-white">Cherished Moments</span>
                         </h2>
                     </FadeIn>
